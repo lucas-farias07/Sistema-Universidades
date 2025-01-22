@@ -1,0 +1,37 @@
+-----Students-----
+   Registration number: 1
+   Student name: Lucas Gerent de Farias
+   Tuition is paid: Tuition not paid
+   Date of registration: 2025-02-13 00:00:00
+   Date of renovation of registration: 2025-02-13 00:00:00
+
+   Registration number: 2
+   Student name: Vinicius Santos Goulart
+   Tuition is paid: Tuition paid
+   Date of registration: 2025-02-13 00:00:00
+   Date of renovation of registration: 2025-02-13 00:00:00
+
+-----Courses-----
+   Course id: 1
+   Course name: Ciência da Computação
+   Duration: 4.5 Years
+   Area: Technology and Engineering
+
+   Course id: 2
+   Course name: Engenharia Eletrica
+   Duration: 4.5 Years
+   Area: Technology and Engineering
+
+-----Subjects-----
+   Subject id: 1
+   Subject name: Algoritmos
+   Duration: 12.0 Hours
+   Area: Technology and Engineering
+
+-----Teachers-----
+   Teacher id: 1
+   Teacher name: Lee Bookson
+   Passport number: A01293847
+   Phone number: 18023239945
+   E-mail address: lee.b@univschool.com.br
+

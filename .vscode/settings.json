@@ -1,0 +1,10 @@
+{
+    "workbench.editor.customLabels.enabled": true,
+    "workbench.editor.customLabels.patterns": {
+        "*/objects.py": "OBJETOS",
+        "*/enums.py": "ENUMS",
+        "*/__init__.py": "START",
+        "*/get_module.py": "MODULES",
+        "*/main.py": "MAIN CODE"
+    }
+}
