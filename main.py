@@ -5,6 +5,10 @@ from src.core.modules import findStudent, findCourse, findSubject, findTeacher, 
 import inquirer # for interface
 #----------------------------------------------
 
+
+def zeca():
+    return None
+
 #comentario pra testar
 
 #mais alteracoes
