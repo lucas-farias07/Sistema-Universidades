@@ -1,6 +1,8 @@
-# Venv folder #
+# Folders #
 ###############
 venv/
+**/__pycache__/
+.vscode/
 
 # Compiled source #
 ###################

@@ -1,4 +1,4 @@
-from shared.enums import EN_area, EN_Tuition
+from src.shared.enums import EN_area
 
 class Student:
     def __init__(self, registration=None, student_name=None, tuition_isPaid=None, date_registration=None, date_renovation_of_registration=None):

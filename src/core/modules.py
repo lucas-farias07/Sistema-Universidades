@@ -1,23 +1,20 @@
 #----------------------------------------------------
-from __init__ import  session, StudentsRegistration, Courses, Subjects, Teachers #sessionmaker object (for database connection) and tables
-from __init__ import RED, GREEN, CYAN, RESET #color codes
-from shared.objects import Student, Course, Subject, Teacher #classes for objects
-from shared.enums import EN_Tuition, EN_area #dictionary with the tuition status
+from config.__init__ import  session, StudentsRegistration, Courses, Subjects, Teachers #sessionmaker object (for database connection) and tables
+from config.__init__ import RED, GREEN, CYAN, RESET #color codes
+from src.shared.objects import Student, Course, Subject, Teacher #classes for objects
+from src.shared.enums import EN_Tuition, EN_area #dictionary with the tuition status
 #----------------------------------------------------
 import sqlalchemy as db #for database manipulation and reading
+from psycopg2 import errors #for error handling
 #----------------------------------------------------
 
 
 def search(pId: int, pTable: db.Table):
-    RegistrationId = StudentsRegistration.c.RegistrationId
-    CourseId = Courses.c.CourseId
-    SubjectId = Subjects.c.SubjectId
-    TeacherId = Teachers.c.TeacherId
     ids = {
-        StudentsRegistration: RegistrationId,
-        Courses: CourseId,
-        Subjects: SubjectId,
-        Teachers: TeacherId
+        StudentsRegistration: StudentsRegistration.c.RegistrationId,
+        Courses: Courses.c.CourseId,
+        Subjects: Subjects.c.SubjectId,
+        Teachers: Teachers.c.TeacherId,
     }
 
     obj = db.select(pTable).where(ids[pTable] == pId)
@@ -39,8 +36,8 @@ def findStudent():
 -    Registration number: {CYAN}{student.registration}{RESET}
 -    Student name: {CYAN}{student.student_name}{RESET}
 -    Tuition is paid: {isPaid}{EN_Tuition[student.tuition_isPaid]}{RESET}
--    Date of registration: {CYAN}{student.date_registration}{RESET}
--    Date of renovation of registration: {CYAN}{student.date_renovation_of_registration}{RESET}
+-    Date of registration: {CYAN}{student.date_registration:%d/%m/%y}{RESET}
+-    Date of renovation of registration: {CYAN}{student.date_renovation_of_registration:%d/%m/%y}{RESET}
 """)
     
     #input to continue
@@ -104,8 +101,8 @@ def exportToFile():
             file.write(f"   Registration number: {i[0]}\n")
             file.write(f"   Student name: {i[1]}\n")
             file.write(f"   Tuition is paid: {EN_Tuition[i[2]]}\n")
-            file.write(f"   Date of registration: {i[3]}\n")
-            file.write(f"   Date of renovation of registration: {i[4]}\n\n")
+            file.write(f"   Date of registration: {i[3]:%d/%m/%y}\n")
+            file.write(f"   Date of renovation of registration: {i[4]:%d/%m/%y}\n\n")
 
         file.write(f"-----Courses-----\n")
         for i in courses:

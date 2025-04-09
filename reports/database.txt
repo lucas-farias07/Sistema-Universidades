@@ -2,14 +2,14 @@
    Registration number: 1
    Student name: Lucas Gerent de Farias
    Tuition is paid: Tuition not paid
-   Date of registration: 2025-02-13 00:00:00
-   Date of renovation of registration: 2025-02-13 00:00:00
+   Date of registration: Thu Feb 13 00:00:00 2025
+   Date of renovation of registration: Thu Feb 13 00:00:00 2025
 
    Registration number: 2
    Student name: Vinicius Santos Goulart
    Tuition is paid: Tuition paid
-   Date of registration: 2025-02-13 00:00:00
-   Date of renovation of registration: 2025-02-13 00:00:00
+   Date of registration: Thu Feb 13 00:00:00 2025
+   Date of renovation of registration: Thu Feb 13 00:00:00 2025
 
 -----Courses-----
    Course id: 1

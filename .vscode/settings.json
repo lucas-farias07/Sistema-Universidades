@@ -6,5 +6,6 @@
         "*/__init__.py": "START",
         "*/get_module.py": "MODULES",
         "*/main.py": "MAIN CODE"
-    }
+    },
+    "python.terminal.activateEnvironment": true
 }
